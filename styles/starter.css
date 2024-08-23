@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#starter {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/hangedMan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, slideUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translate(-50%, 100%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+#continue-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeInBtn 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInBtn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
