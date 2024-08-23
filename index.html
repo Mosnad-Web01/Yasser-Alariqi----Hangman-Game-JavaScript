@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hangman Game</title>
     <script>
-        window.onload = function() {
-            // Check if the URL has the 'skipStarter' query parameter
-            if (!window.location.search.includes('skipStarter=true')) {
-                window.location.href = 'starter.html';
-            }
-        };
+      window.onload = function () {
+        if (!window.location.search.includes("skipStarter=true")) {
+          window.location.href = "starter.html";
+        }
+      };
     </script>
-</head>
-<body>
-    <h1>Home Page</h1>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+
+    <article class="game-modal">
+        <div class="content">
+            <img src="./assets/lost.gif" alt="loser">
+            <h4>Game Over</h4>
+            <p>The correct word was: <b class="correct-word">rainbow</b></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </article>
+
+    
+
+    <main class="container">
+      <section class="hangman-box">
+        <img src="./assets/hangman-0.svg" alt="handman image" />
+        <h1>Hangman Game</h1>
+      </section>
+      <section class="game-box">
+        <ul class="word-display">
+            <li class="letter"></li>
+            <li class="letter"></li>
+            <li class="letter"></li>
+            <li class="letter guessed">a</li>
+            <li class="letter"></li>
+            <li class="letter"></li>
+        </ul>
+        <h4 class="hint-text">
+          Hint:
+          <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+        </h4>
+        <h4 class="guesses-text">
+          Incorrect guesses:
+          <b>0 / 10</b>
+        </h4>
+        <article class="keyboard" id="keyboard">
+        
+        </article>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
