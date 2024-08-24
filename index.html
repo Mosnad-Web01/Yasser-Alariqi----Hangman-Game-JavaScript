@@ -11,48 +11,36 @@
       };
     </script>
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="./js/word-list.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
-
-    <article class="game-modal">
-        <div class="content">
-            <img src="./assets/lost.gif" alt="loser">
-            <h4>Game Over</h4>
-            <p>The correct word was: <b class="correct-word">rainbow</b></p>
-            <button class="play-again">Play Again</button>
-        </div>
+    <article class="game-modal" style="display: none;">
+      <div class="content">
+        <img src="./assets/lost.gif" alt="Result Image" class="result-image" />
+        <h4 class="result-text">Game Over</h4>
+        <p>The correct word was: <b class="correct-word">rainbow</b></p>
+        <button class="play-again">Play Again</button>
+      </div>
     </article>
-
-    
 
     <main class="container">
       <section class="hangman-box">
-        <img src="./assets/hangman-0.svg" alt="handman image" />
+        <img id="hangmanImage" src="./assets/hangman-0.svg" alt="handman image" />
         <h1>Hangman Game</h1>
       </section>
       <section class="game-box">
-        <ul class="word-display">
-            <li class="letter"></li>
-            <li class="letter"></li>
-            <li class="letter"></li>
-            <li class="letter guessed">a</li>
-            <li class="letter"></li>
-            <li class="letter"></li>
-        </ul>
+        <ul class="word-display"></ul>
         <h4 class="hint-text">
           Hint:
-          <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+          <b id="hint-text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
         </h4>
         <h4 class="guesses-text">
           Incorrect guesses:
-          <b>0 / 10</b>
+          <b id="guesses-text-paragraph">0 / 6</b>
         </h4>
-        <article class="keyboard" id="keyboard">
-        
-        </article>
+        <article class="keyboard" id="keyboard"></article>
       </section>
     </main>
-
-    <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>

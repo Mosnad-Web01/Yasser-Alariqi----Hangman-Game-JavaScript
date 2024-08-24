@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width:1000px;
   background-color: white;
   display: flex;
   padding: 60px 40px;
