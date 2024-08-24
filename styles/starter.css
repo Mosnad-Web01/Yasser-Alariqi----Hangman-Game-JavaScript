@@ -37,7 +37,7 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards, slideUp 2s ease-in-out forwards;
 }
@@ -55,6 +55,7 @@ body, html {
 #continue-btn {
     display: none;
     margin-top: 20px;
+    margin-bottom: 100PX;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #ff0000;
