@@ -4,7 +4,7 @@ This is a Hangman game where users can guess the hidden word by selecting letter
 
 ## Live Version
 
-You can play the game [here](#).
+You can play the game [here](https://yasseresam.github.io/Hangman-Game-JavaScript/).
 
 ## Screenshots
 

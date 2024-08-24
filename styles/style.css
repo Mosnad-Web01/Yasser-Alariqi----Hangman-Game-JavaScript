@@ -22,7 +22,9 @@ body {
 }
 
 .container {
-  width:1000px;
+  width: 100%;
+  max-width: 900px;
+  
   background-color: white;
   display: flex;
   padding: 60px 40px;
@@ -33,6 +35,7 @@ body {
 
 .hangman-box img {
   max-width: 270px;
+  width: 100%;
 }
 
 .hangman-box h1 {
@@ -175,3 +178,29 @@ body {
     display: none;
   }
 }
+
+
+@media (max-width: 400px) {
+    .keyboard button {
+        width: calc(100% / 7 - 10px);
+        cursor: pointer;
+        color: white;
+        background-color: red;
+        outline: none;
+        padding: 7px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 4px;
+      }
+      .word-display {
+        gap: 6px;
+      }
+      
+      .word-display .letter {
+        width: 22px;
+      }
+  }
+
+

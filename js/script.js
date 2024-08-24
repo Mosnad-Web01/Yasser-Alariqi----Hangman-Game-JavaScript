@@ -34,7 +34,7 @@ window.onload = function () {
   
   // Function to handle the game logic when a letter is clicked
   const initGame = (button, clickedLetter) => {
-    button.disabled = true; // Disable the button after it's clicked
+    button.disabled = true;
     let isCorrect = false;
   
     [...currentWord].forEach((letter, index) => {
@@ -51,7 +51,7 @@ window.onload = function () {
       hangManImage.src = `./assets/hangman-${wrongGuesses}.svg`;
   
       if (wrongGuesses >= maxWrongGuesses) {
-        endGame(false); // Game Over - Loss
+        endGame(false);
       }
     } else {
       checkWinCondition();
@@ -65,7 +65,7 @@ window.onload = function () {
     );
   
     if (allGuessed) {
-      endGame(true); // Game Over - Win
+      endGame(true);
     }
   };
   
@@ -83,7 +83,7 @@ window.onload = function () {
     hangManImage.src = `./assets/hangman-0.svg`;
     guessesTextParagraph.innerHTML = `${wrongGuesses} / ${maxWrongGuesses}`;
     gameModal.style.display = "none";
-    keyboard.innerHTML = ""; // Clear previous keyboard
+    keyboard.innerHTML = "";
     getRandomWord();
     generateKeyboard();
   };
@@ -93,7 +93,7 @@ window.onload = function () {
     for (let i = 0; i < qwertyLayout.length; i++) {
       let button = document.createElement("button");
       button.textContent = qwertyLayout[i];
-      button.id = `key-${qwertyLayout[i]}`; // Assign an ID to each button
+      button.id = `key-${qwertyLayout[i]}`;
       keyboard.appendChild(button);
   
       button.addEventListener("click", (e) => {
@@ -113,10 +113,8 @@ window.onload = function () {
     }
   });
   
-  // Event listener for "Play Again" button
+
   playAgainButton.addEventListener("click", resetGame);
-  
-  // Initialize the game on page load
   getRandomWord();
   generateKeyboard();
   
